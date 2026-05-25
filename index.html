@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juice Markicob — Jus Segar Alami</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ====== HEADER & NAVIGATION ====== -->
+  <header id="mainHeader">
+    <nav aria-label="Navigasi utama">
+      <a href="#" class="logo" onclick="navigateTo('home'); return false;">
+        <i class="fa-solid fa-blender"></i>
+        JUICE MARKICOB
+      </a>
+      <ul class="nav-links" role="menubar">
+        <li role="none"><a href="#" role="menuitem" class="active" data-page="home" onclick="navigateTo('home'); return false;">Home</a></li>
+        <li role="none"><a href="#" role="menuitem" data-page="profil" onclick="navigateTo('profil'); return false;">Profil</a></li>
+        <li role="none"><a href="#" role="menuitem" data-page="galeri" onclick="navigateTo('galeri'); return false;">Galeri</a></li>
+        <li role="none"><a href="#" role="menuitem" data-page="form" onclick="navigateTo('form'); return false;">Form</a></li>
+        <li role="none"><a href="#" role="menuitem" data-page="biodata" onclick="navigateTo('biodata'); return false;">Biodata</a></li>
+      </ul>
+      <button class="hamburger" onclick="toggleMobile()" aria-label="Buka menu navigasi">
+        <i class="fa-solid fa-bars" id="hamburgerIcon"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav" role="navigation" aria-label="Navigasi mobile">
+    <a href="#" class="active" data-page="home" onclick="navigateTo('home'); closeMobile(); return false;">Home</a>
+    <a href="#" data-page="profil" onclick="navigateTo('profil'); closeMobile(); return false;">Profil</a>
+    <a href="#" data-page="galeri" onclick="navigateTo('galeri'); closeMobile(); return false;">Galeri</a>
+    <a href="#" data-page="form" onclick="navigateTo('form'); closeMobile(); return false;">Form</a>
+    <a href="#" data-page="biodata" onclick="navigateTo('biodata'); closeMobile(); return false;">Biodata</a>
+  </div>
+
+  <!-- ====== MAIN CONTENT ====== -->
+  <main>
+
+    <!-- ==================== HALAMAN HOME ==================== -->
+    <section id="page-home" class="page active" aria-label="Halaman Utama">
+      <div class="page-inner">
+
+        <!-- Hero -->
+        <div class="hero anim-in">
+          <div class="section-label">Segar Setiap Hari</div>
+          <h1 class="section-title">
+            Jus Alami Pilihan,<br><span class="highlight">Nikmat & Menyehatkan</span>
+          </h1>
+          <p class="section-desc">
+            Dibuat dari buah-buahan segar pilihan tanpa pengawet. Rasa alami yang menyegarkan tubuh dan pikiranmu.
+          </p>
+          <div class="hero-badges">
+            <div class="hero-badge">
+              <i class="fa-solid fa-leaf"></i>
+              100% Alami
+            </div>
+            <div class="hero-badge">
+              <i class="fa-solid fa-droplet"></i>
+              Tanpa Pengawet
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Jus -->
+        <div class="anim-in" style="animation-delay: 0.1s;">
+          <div class="section-label">Menu Kami</div>
+          <h2 class="section-title">Pilihan Jus Segar</h2>
+          <p class="section-desc">Delapan varian jus istimewa yang siap menyegarkan harimu. Semua dibuat fresh saat dipesan.</p>
+        </div>
+        <div class="jus-grid" id="jusGrid">
+        </div>
+
+        <!-- Jam Buka -->
+        <div class="hours-section anim-in" style="animation-delay: 0.15s;">
+          <div class="hours-icon">
+            <i class="fa-regular fa-clock"></i>
+          </div>
+          <div class="hours-info">
+            <h3>Jam Operasional</h3>
+            <div class="hours-list" id="hoursList">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== HALAMAN PROFIL ==================== -->
+    <section id="page-profil" class="page" aria-label="Halaman Profil Usaha">
+      <div class="page-inner">
+
+        <div class="profil-hero">
+          <figure class="profil-img-wrap anim-in">
+            <img src="tampilan depan.jpeg" alt="Tampak depan toko MARKICOB" loading="lazy">
+            <figcaption style="position:absolute;bottom:0;left:0;right:0;padding:16px 20px;background:linear-gradient(to top,rgba(0,0,0,0.7),transparent);font-size:0.8rem;color:rgba(255,255,255,0.7);">Tampak depan JUICE MARKICOB — Jl. Abdul Hakim No. 2, Medan</figcaption>
+          </figure>
+          <div class="anim-in" style="animation-delay:0.1s;">
+            <div class="section-label">Tentang Kami</div>
+            <h2 class="section-title">Cerita di Balik<br>Setiap Gelas Jus</h2>
+            <p class="profil-desc-text">
+              <strong>JUICE MARKICOB</strong> berdiri sejak <time datetime="2021">2021</time> di Jalan Abdul Hakim, No 2, Padang Bulan, Medan. Bermula dari kecintaan pendiri terhadap jus buah segar yang sulit ditemukan dengan kualitas terbaik di sekitar kampus.
+            </p>
+            <p class="profil-desc-text">
+              Kami percaya bahwa minuman sehat tidak harus mahal dan tidak membosankan. Setiap gelas jus markicob dibuat dari buah-buahan yang dipilih langsung dari petani lokal, tanpa bahan pengawet, dan tanpa pewarna sintetis.
+            </p>
+            <p class="profil-desc-text">
+              Visi kami sederhana: <strong>menghadirkan kesegaran alami yang terjangkau untuk semua kalangan</strong>, mulai dari pelajar, mahasiswa, pekerja, hingga keluarga.
+            </p>
+          </div>
+        </div>
+
+        <!-- Statistik -->
+        <div class="profil-stats anim-in" style="animation-delay:0.15s;">
+          <div class="stat-box">
+            <div class="stat-num">2021</div>
+            <div class="stat-label">Tahun Berdiri</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">600k+</div>
+            <div class="stat-label">Gelas Terjual</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">8</div>
+            <div class="stat-label">Varian Menu</div>
+          </div>
+        </div>
+
+        <!-- Lokasi -->
+        <div class="lokasi-section anim-in" style="animation-delay:0.2s; margin-top: 40px;">
+          <h2><i class="fa-solid fa-location-dot"></i> Lokasi & Informasi</h2>
+          <div class="lokasi-grid">
+            <div class="lokasi-item">
+              <div class="lokasi-icon"><i class="fa-solid fa-map-pin"></i></div>
+              <div class="lokasi-text">
+                <h4>Alamat</h4>
+                <address style="font-style:normal;">Jl. Abdul Hakim No. 2, Padang Bulan, Medan</address>
+              </div>
+            </div>
+            <div class="lokasi-item">
+              <div class="lokasi-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="lokasi-text">
+                <h4>Telepon / WhatsApp</h4>
+                <p><a href="tel:+6281269908969" style="color:var(--accent);text-decoration:none;">0812-6990-8969</a></p>
+              </div>
+            </div>
+            <div class="lokasi-item">
+              <div class="lokasi-icon"><i class="fa-brands fa-instagram"></i></div>
+              <div class="lokasi-text">
+                <h4>Instagram</h4>
+                <p><a href="#" style="color:var(--accent);text-decoration:none;">@juicemarkicob</a></p>
+              </div>
+            </div>
+            <div class="lokasi-item">
+              <div class="lokasi-icon"><i class="fa-solid fa-circle-info"></i></div>
+              <div class="lokasi-text">
+                <h4>Jenis Usaha</h4>
+                <p>UMKM Kuliner Minuman Segar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== HALAMAN GALERI ==================== -->
+    <section id="page-galeri" class="page" aria-label="Halaman Galeri">
+      <div class="page-inner">
+
+        <div class="anim-in">
+          <div class="section-label">Dokumentasi</div>
+          <h2 class="section-title">Galeri Juice Markicob</h2>
+          <p class="section-desc">Momen-momen di balik layar, dari proses pembuatan hingga pelanggan yang menikmati jus segar kami.</p>
+        </div>
+
+        <div class="galeri-grid anim-in" style="animation-delay:0.1s;" id="galeriGrid">
+          <!-- Diisi oleh JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== HALAMAN FORM ==================== -->
+    <section id="page-form" class="page" aria-label="Halaman Pemesanan">
+      <div class="page-inner">
+
+        <div style="text-align:center;" class="anim-in">
+          <div class="section-label" style="justify-content:center;">Pemesanan</div>
+          <h2 class="section-title">Pesan Jus Favoritmu</h2>
+          <p class="section-desc" style="margin:0 auto;">Isi form di bawah untuk melakukan pemesanan. Kami akan menghubungimu melalui WhatsApp untuk konfirmasi.</p>
+        </div>
+
+        <form class="form-container anim-in" style="animation-delay:0.1s;" id="orderForm" novalidate>
+          <fieldset style="border:none;padding:0;">
+            <legend style="font-family:var(--font-display);font-size:1.15rem;font-weight:700;margin-bottom:24px;padding-bottom:12px;border-bottom:1px solid var(--border);width:100%;">Data Pemesan</legend>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nama">Nama Lengkap <span class="required">*</span></label>
+                <input type="text" id="nama" class="form-input" placeholder="Masukkan nama lengkap" required>
+                <div class="error-msg" id="errNama">Nama wajib diisi</div>
+              </div>
+              <div class="form-group">
+                <label for="telepon">No. WhatsApp <span class="required">*</span></label>
+                <input type="tel" id="telepon" class="form-input" placeholder="08xxxxxxxxxx" required>
+                <div class="error-msg" id="errTelepon">Nomor WhatsApp tidak valid</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="alamat">Alamat Pengiriman <span class="required">*</span></label>
+              <input type="text" id="alamat" class="form-input" placeholder="Alamat lengkap pengiriman" required>
+              <div class="error-msg" id="errAlamat">Alamat wajib diisi</div>
+            </div>
+          </fieldset>
+
+          <fieldset style="border:none;padding:0;margin-top:28px;">
+            <legend style="font-family:var(--font-display);font-size:1.15rem;font-weight:700;margin-bottom:24px;padding-bottom:12px;border-bottom:1px solid var(--border);width:100%;">Detail Pesanan</legend>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="menuJus">Pilih Jus <span class="required">*</span></label>
+                <select id="menuJus" class="form-select" required>
+                  <option value="">— Pilih Menu —</option>
+                </select>
+                <div class="error-msg" id="errMenu">Silakan pilih menu jus</div>
+              </div>
+              <div class="form-group">
+                <label for="jumlah">Jumlah <span class="required">*</span></label>
+                <input type="number" id="jumlah" class="form-input" min="1" max="20" value="1" required>
+                <div class="error-msg" id="errJumlah">Jumlah minimal 1, maksimal 20</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="catatan">Catatan Tambahan</label>
+              <textarea id="catatan" class="form-textarea" placeholder="Contoh: tambah gula, tambah es, dsb."></textarea>
+            </div>
+          </fieldset>
+
+          <button type="submit" class="form-submit">
+            <i class="fa-solid fa-paper-plane"></i>
+            Kirim Pesanan
+          </button>
+        </form>
+
+      </div>
+    </section>
+
+    <!-- ==================== HALAMAN BIODATA ==================== -->
+    <section id="page-biodata" class="page" aria-label="Halaman Biodata Pembuat">
+      <div class="page-inner">
+
+        <div style="text-align:center;" class="anim-in">
+          <div class="section-label" style="justify-content:center;">Pembuat Website</div>
+          <h2 class="section-title">Haloo</h2>
+          <p class="section-desc" style="margin:0 auto;">Perkenalkan, saya adalah mahasiswa yang bertanggung jawab dalam pengembangan website ini.</p>
+        </div>
+
+        <article class="biodata-card anim-in" style="animation-delay:0.1s;">
+          <div class="biodata-header">
+            <img src="biodata.jpeg" alt="Foto pembuat website" class="biodata-avatar">
+          </div>
+          <div class="biodata-body">
+            <h2 class="biodata-name"> Maria Juliati Sipayung</h2>
+            <p class="biodata-role">NIM:2505181012</p>
+
+            <div class="biodata-info">
+              <div class="biodata-info-item">
+                <div class="biodata-info-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="biodata-info-text">
+                  <h4>Pendidikan</h4>
+                  <p>Mahasiswa Teknologi Rekayasa Perangkat Lunak — Politeknik Negeri Medan</p>
+                </div>
+              </div>
+              <div class="biodata-info-item">
+                <div class="biodata-info-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="biodata-info-text">
+                  <h4>Email</h4>
+                  <p>mariajuliati@students.polmed.ac.id</p>
+                </div>
+              </div>
+              <div class="biodata-info-item">
+                <div class="biodata-info-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="biodata-info-text">
+                  <h4>Telepon</h4>
+                  <p><a href="tel:+6285678901234" style="color:var(--accent);text-decoration:none;">0877-5144-1024</a></p>
+                </div>
+              </div>
+              <div class="biodata-info-item">
+                <div class="biodata-info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="biodata-info-text">
+                  <h4>Alamat</h4>
+                  <p>Jl Pembangunan, Padang Bulan, Medan Sumatera Utara</p>
+                </div>
+              </div>
+              <div class="biodata-info-item">
+                <div class="biodata-info-icon"><i class="fa-solid fa-quote-left"></i></div>
+                <div class="biodata-info-text">
+                  <h4>Motto</h4>
+                  <p>"Hidup Lebih Berguna"</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-text">&copy; 2026 <span>juice markicob</span>. Seluruh hak cipta dilindungi.</p>
+    </div>
+  </footer>
+
+  <!-- ====== TOAST CONTAINER ====== -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
