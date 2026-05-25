@@ -88,7 +88,7 @@
         { img: 'proses pembuatan.jpeg', caption: 'Proses pembuatan jus segar', tall: false },
         { img: 'buah buahan.jpeg', caption: 'Buah-buahan pilihan dari petani lokal', tall: false },
         { img: 'tim markicob.jpeg', caption: 'Tim Markicob', tall: false },
-        { img: 'Juice Buah.jpeg', caption: 'Juice Buah', tall: false },
+        { img: 'Juice buah.jpeg', caption: 'Juice Buah', tall: false },
         { img: 'tampilan depan.jpeg', caption: 'Tampilan depan Juice Markicob', tall: false },
         { img: 'dengan pengunjung.jpeg', caption: 'Dengan Pembuat Website', tall: false }
     ];
